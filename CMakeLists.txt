@@ -5,6 +5,13 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
+include_directories( 
+
+/home/arjay55/code/cl_slam/colcon_venv/install/pcl_conversions/include/pcl_conversions 
+
+# Add more directories as needed 
+
+) 
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
@@ -18,6 +25,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(pcl_msgs REQUIRED)
+find_package(pcl_conversions REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_sensor_msgs REQUIRED)
